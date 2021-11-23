@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import 'keen-slider/keen-slider.min.css';
+import { useKeenSlider } from 'keen-slider/react';
+
 import './App.css';
 
 function App() {
+  const [sliderRef] = useKeenSlider();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div ref={sliderRef} className='keen-slider'>
+        <div className='keen-slider__slide custom-slide1'>1</div>
+        <div className='keen-slider__slide custom-slide2'>2</div>
+        <div className='keen-slider__slide custom-slide3'>3</div>
+      </div>
     </div>
   );
 }
