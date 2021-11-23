@@ -1,7 +1,7 @@
 import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider } from 'keen-slider/react';
 
-import './App.css';
+import './App.scss';
 
 function App() {
   const [sliderRef] = useKeenSlider();
